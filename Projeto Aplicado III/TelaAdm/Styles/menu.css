@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #383838;
+    background-color: #ececec;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    height: 7vh;
+    background-color: #2883a7;
+    color: rgb(255, 255, 255);
+    padding: 0px 30px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    letter-spacing: 3px;
+}
+
+.icon i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.dados {
+    width: 0px;
+    color: #333;
+    position: absolute;
+    top: 7%;
+    left: 92%;
+    display: none;
+}
+
+.dados.expPerfil {
+    width: 130px;
+    height: 15%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 10px 0px 0px 10px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    ;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfil {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.perfil i {
+    font-size: 25px;
+}
+
+.sair {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sair i {
+    font-size: 25px;
+}
+
+.dados a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.dados a:hover {
+    text-decoration: underline;
+}
+
+.paginas {
+    width: 100%;
+    height: 6vh;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerda {
+    width: 80%;
+    gap: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.produtos a {
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.produtos a:hover {
+    text-decoration: underline;
+}
+
+.produtos i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.pedido a {
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pedido a:hover {
+    text-decoration: underline;
+}
+
+.pedido i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.pedido span {
+    font-size: 20px;
+}
+
+.caixa a {
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.caixa a:hover {
+    text-decoration: underline;
+}
+
+.caixa i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.carrinho {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+    transition: .2s;
+}
+
+.carrinho i {
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#carrinho:hover {
+    transform: scale(1.1);
+}
+
+.carrinho span {
+    font-size: 20px;
+}
+
+.pedidos {
+    width: 0px;
+    color: #333;
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    z-index: 4;
+    display: none;
+}
+
+.pedidos.expCarrinho {
+    width: 350px;
+    height: 70%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    ;
+    z-index: 4;
+    display: block;
+}
+
+#pedidos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pedidos h2 {
+    color: #333;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.btnLimpar {
+    color: rgb(202, 0, 34);
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#lista-itens {
+    width: 100%;
+    height: 300px;
+    gap: 10px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 10px;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 174, 0);
+    border-width: 2px;
+    border-color: #ccc;
+    border-bottom-style: solid;
+}
+
+.item-carrinho button.remover {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.item-carrinho button.remover i {
+    font-size: 25px;
+    color: rgb(202, 0, 34);
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #28a745;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #23943e;
+}
+
+.page {
+    width: 250px;
+    color: #fff;
+    border-bottom-right-radius: 40px;
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 3px;
+}
+
+.itens {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 50px 100px 0px 150px;
+}
+
+.item {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 20px;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: .3s;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.item img {
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+}
+
+.item p {
+    color: #333;
+    font-size: 18px;
+    margin: 0px 20px 0px 20px;
+    font-weight: bold;
+}
+
+.item li {
+    width: 100%;
+    margin: 5px;
+    font-size: large;
+    border-radius: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10%;
+    background-color: #2883a7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1366px) {}

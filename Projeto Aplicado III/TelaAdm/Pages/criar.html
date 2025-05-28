@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Produto</title>
+    <link rel="stylesheet" href="../CSS/criar.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Sistema de Comandas</h1>
+            <div class="sair">
+                <a href="../Html/telaLogin.html">Sair</a>
+            </div>
+        </div>
+
+        <nav class="paginas">
+            <div class="menu">
+                <a href="../Html/produtos.html">Menu</a>
+            </div>
+            <div class="comanda">
+                <a href="../Html/comandas.html">Comandas</a>
+            </div>
+        </nav>
+    </header>
+
+    <header class="novo">
+        <h1>Novo Produto</h1>
+    </header>
+
+    <main>
+        <!-- Campo novo produto -->
+        <div class="container">
+            <!-- Adiciona imagem -->
+            <input type="file" id="product-image" accept="image/*" hidden>
+            <div class="img-area">
+                <img src="../Images/Album.png" alt="image">
+            </div>
+            <div class="image">
+                <button class="select-img">Adicione uma Imagem</button>
+            </div>
+            <!-- Nome do produto -->
+            <div class="nome">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do produto" required>
+            </div>
+            <!-- Valor do produto -->
+            <div class="valor">
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor" name="valor" value="R$ 0,00">
+            </div>
+            <!-- Botão salvar -->
+            <button class="btn" type="submit">Salvar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Sistema de Comandas</p>
+    </footer>
+
+    <script src="../JavaScript/criar.js"></script>
+</body>
+
+</html>
