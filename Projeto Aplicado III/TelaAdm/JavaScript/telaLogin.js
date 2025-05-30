@@ -9,7 +9,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     // Validação do login
     if (nome === "admin" && senha === "12345") {
         alert("Sucesso!");
-        location.href = "home.html";
+        location.href = "menu.html";
     } else {
         mensagemErro.textContent = "Usuário ou senha incorretos!";
     }
